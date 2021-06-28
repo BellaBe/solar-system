@@ -1,0 +1,62 @@
+[
+    {
+        "name": "sun",
+        "imagePath": "sun.png",
+        "age": "4.603",
+        "mass": "1.989 × 10^30 kg"
+    },
+    {
+        "name": "earth",
+        "imagePath": "earth.png",
+        "age": "4.543",
+        "mass": "5.972 × 10^24 kg"
+    },
+    {
+        "name": "jupiter",
+        "imagePath": "jupiter.png",
+        "age": "4.603",
+        "mass": "1.898 × 10^27 kg"
+    },
+    {
+        "name": "mars",
+        "imagePath": "mars.png",
+        "age": "4.603",
+        "mass": "6.39 × 10^23 kg"
+    },
+    {
+        "name": "mercury",
+        "imagePath": "mercury.png",
+        "age": "4.503",
+        "mass": "3.285 × 10^23 kg"
+    },
+    {
+        "name": "moon",
+        "imagePath": "moon.png",
+        "age": "4.53",
+        "mass": "7.348 × 10^22 kg"
+    },
+    {
+        "name": "neptune",
+        "imagePath": "neptune.png",
+        "age": "4.503",
+        "mass": "1.024 × 10^26 kg"
+    },
+    {
+        "name": "saturn",
+        "imagePath": "saturn.png",
+        "age": "4.503",
+        "mass": "5.683 × 10^26 kg"
+    },
+    {
+        "name": "uranus",
+        "imagePath": "uranus.png",
+        "age": "4.503",
+        "mass": "8.681 × 10^25 kg"
+    },
+    {
+        "name": "venus",
+        "imagePath": "venus.png",
+        "age": "4.503",
+        "mass": "4.867 × 10^24 kg"
+    }
+]
