@@ -16,7 +16,6 @@ export const getPlanets = async() => {
             p.imagePath = path;
             return p; 
     });
-        console.log(planets)
 
         return planets;
     } catch (error) {

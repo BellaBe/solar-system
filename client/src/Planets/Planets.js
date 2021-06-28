@@ -1,19 +1,17 @@
 import React from 'react';
-
 import axios from 'axios';
 
-export default class Solar extends React.Component {
+
+export default class Planets extends React.Component {
   state = {
-    bodies: []
+    planets: []
   }
 
   componentDidMount() {
     axios.get(`http://localhost:3001/api/planets`)
       .then(res => {
-        console.log(res.data)
-        const bodies = res.data;
-        
-        this.setState({ bodies});
+        const planets = res.data;
+        this.setState({ planets});
       })
       .catch(err => console.log(err))
   }
@@ -22,17 +20,17 @@ export default class Solar extends React.Component {
     return (
       <div className="main">
         <ul className="cards">
-        { this.state.bodies.map(body => 
-        <li className="card" key={body.name}>
+        { this.state.planets.map(p => 
+        <li className="card" key={p.name}>
           <div className="card-header"></div>
           <div className="card-body">
-            <img alt={body.name} src={body.imagePath}/>
+            <img alt={p.name} src={p.imagePath}/>
             <div className="semitransparent"></div>
           </div>
           <div className="card-footer">
-            <div className="card-footer__item medium-caps-font mb">{body.name.toUpperCase()}</div>
-            <div className="card-footer__item small-font mb5">Age: {body.age} billion y.</div>
-            <div className="card-footer__item small-font">Mass: {body.mass}</div>
+            <div className="card-footer__item medium-caps-font mb">{p.name.toUpperCase()}</div>
+            <div className="card-footer__item small-font mb5">Age: {p.age} billion y.</div>
+            <div className="card-footer__item small-font">Mass: {p.mass}</div>
           </div>
         </li>)}
       </ul>
