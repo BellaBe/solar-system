@@ -1,4 +1,5 @@
 import { promises as fs } from "fs";
+import { dirname } from "path/posix";
 
 interface Planet{
     name: string,
@@ -8,12 +9,18 @@ interface Planet{
 }
 
 export const getPlanets = async() => {
-    const data = await fs.readFile("data.json", "utf-8");
-    const planets: Planet[] = JSON.parse(data).map((p: Planet) => {
+    try {
+        const data = await fs.readFile(__dirname +"/data.json", "utf-8");
+        const planets: Planet[] = JSON.parse(data).map((p: Planet) => {
         const path = `http://localhost:3001/static/images/` + p.imagePath;
             p.imagePath = path;
             return p; 
     });
+        console.log(planets)
 
-    return planets;
+        return planets;
+    } catch (error) {
+        console.log(error)
+    }
+    
 }
